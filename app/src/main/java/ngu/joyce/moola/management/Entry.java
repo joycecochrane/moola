@@ -14,7 +14,7 @@ public abstract class Entry {
     protected int amount;
     protected Category category;
     protected Subcategory subcategory;
-    private Date date;
+    protected Date date;
 
 
 

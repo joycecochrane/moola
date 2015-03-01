@@ -13,7 +13,7 @@ public class Category {
     protected Image image;
     protected List<Subcategory> subcategories;
 
-    public void Category(String name, Image image, List<Subcategory> subcategories) {
+    public Category(String name, Image image, List<Subcategory> subcategories) {
         this.name = name;
         this.image = image;
         this.subcategories = subcategories;

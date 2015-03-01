@@ -7,11 +7,14 @@ import java.util.Date;
  */
 public class Income extends Entry {
 
-    public void Income(String name, String description, Category category) {
+
+
+    public Income(String name, String description,
+                       Category category, Subcategory subcategory) {
         this.name = name;
         this.description = description;
         this.category = category;
-        this.subcategories = category.getSubcategories();
+        this.subcategory = subcategory;
         date = new Date();
     }
 }
