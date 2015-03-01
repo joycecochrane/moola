@@ -11,14 +11,16 @@ public abstract class Entry {
 
     protected String name;
     protected String description;
+    protected int amount;
     protected Category category;
-
+    protected Subcategory subcategory;
     private Date date;
 
    public void Entry(String name, String description, Category category) {
        this.name = name;
        this.description = description;
        this.category = category;
+       this.subcategories = category.getSubcategories();
        date = new Date();
     }
 
@@ -26,7 +28,7 @@ public abstract class Entry {
         return name;
     }
 
-    public String setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -34,12 +36,38 @@ public abstract class Entry {
         return category;
     }
 
-    public Category setCategory (String name, Image icon) {
-        Category.setName(name);
-        Category.setIcon(icon);
-
-
+    public void setCategory (Category category) {
+        this.category = category;
     }
+
+    public Subcategory getSubcategory() {
+        return subcategory;
+    }
+
+    public void setSubcategory(Subcategory sub) {
+        subcategory = sub;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
 
 
 
