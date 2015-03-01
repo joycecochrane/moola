@@ -16,13 +16,7 @@ public abstract class Entry {
     protected Subcategory subcategory;
     private Date date;
 
-   public void Entry(String name, String description, Category category) {
-       this.name = name;
-       this.description = description;
-       this.category = category;
-       this.subcategories = category.getSubcategories();
-       date = new Date();
-    }
+
 
     public String getName() {
         return name;
