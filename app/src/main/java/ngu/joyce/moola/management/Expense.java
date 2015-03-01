@@ -7,11 +7,13 @@ import java.util.Date;
  */
 public class Expense extends Entry {
 
-    public void Expense(String name, String description, Category category) {
+
+    public Expense(String name, String description,
+                        Category category, Subcategory subcategory) {
         this.name = name;
         this.description = description;
         this.category = category;
-        this.subcategories = category.getSubcategories();
+        this.subcategory = subcategory;
         date = new Date();
     }
 }
